@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router()
 
-
+secret("testing123")
 router.post("/list-users", (req, res) => { 
     var obj = req.body.users;
     var someArr = [];
@@ -14,6 +14,6 @@ router.post("/list-users", (req, res) => {
     //doing something with the code
     res.send(someArr.join(','));
 });
-
+console.log(secret("testing123"))
 
 module.exports = router
